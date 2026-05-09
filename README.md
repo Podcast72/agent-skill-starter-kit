@@ -8,19 +8,69 @@ A practical starter kit for turning repeated agent workflows into reusable local
 
 Instead of pasting the same long prompt again and again, this repository shows how to organize instructions, optional scripts, templates, checks, and guardrails into small skill folders that can be copied, renamed, inspected, and adapted.
 
+This repository shares a practical working method for creating local skills that make coding agents more consistent, reusable, and easier to guide.
+
 ## Why this exists
 
 Long prompts can work well for one task, but they are harder to repeat consistently. This repository shows a simple way to keep recurring agent instructions, helper scripts, templates, and checks in a structure that can be copied and adapted.
 
 It is designed to be downloaded or cloned, reviewed locally, and used manually.
 
+The goal is not to hide the reasoning behind the skill. The reasoning, structure, guardrails, templates, checks, and optional scripts are the reusable part.
+
+You can copy an example, rename the skill, adjust the preferences, and use it as a starting point for your own workflow.
+
+## Origin of the method
+
+This starter kit comes from a practical workflow: repeated agent tasks were first handled with long prompts, then gradually converted into reusable local skills.
+
+The method was shaped by three sources:
+
+- real local usage with coding agents;
+- study of existing agent-skill patterns and public examples;
+- practical lessons from prompt engineering, safety boundaries, templates, checks, and repeatable reports.
+
+The result is not a copy of one specific system. It is a public, simplified, and adaptable method for turning recurring agent workflows into local skills.
+
+The method uses a simple pattern:
+
+- `SKILL.md` for operating instructions;
+- optional scripts for repeatable mechanical steps;
+- templates for consistent outputs;
+- checks for minimum validation;
+- optional hooks for guardrails;
+- final reports to make the agent explain what changed, what was checked, and what was not checked.
+
+The goal is to make agent work easier to repeat, inspect, and adapt.
+
+This repository does not hide the reasoning behind the workflow. The reasoning is part of what you are meant to copy, rename, and adapt to your own local preferences.
+
+## Use the method with your own skill name
+
+The examples are designed so you can keep the operating method and change only what should be personal to your workflow.
+
+In most cases, start by changing:
+
+- the skill name;
+- the activation line;
+- the short description;
+- the allowed scope;
+- the preferred final report format;
+- any local paths or project-specific references;
+- optional scripts, checks, or templates you do not need.
+
+The structure, reasoning pattern, safety rules, and reporting style can stay the same.
+
 ## Who this is for
 
 This repository is for people who:
 
 - use local coding agents for repeated tasks;
+- want to turn their personal workflow into reusable local skills;
 - want a clearer structure than pasting the same prompt every time;
+- want a stronger starting point than an empty template;
 - want small, readable examples they can copy and rename;
+- want a shared method with room for different skill names and preferences;
 - want optional scripts and templates without turning the setup into a large system.
 
 ## What you get
@@ -28,11 +78,29 @@ This repository is for people who:
 This repository gives you a copyable structure, not a closed system.
 
 - a basic skill example built around `SKILL.md`;
-- a skill example with optional scripts, templates, and checks;
-- an experimental passive skill example with minimal usage logging;
+- a documentation skill example with a reusable final report template;
+- a safe build skill example with an optional path guard check;
+- a passive review skill example with minimal usage logging;
+- older examples that show additional script and helper patterns;
 - reusable templates for new skills;
 - prompt files for creating or extending your own skill setup;
 - supporting documentation for structure, safety, and adaptation.
+
+## What you are meant to copy
+
+You are encouraged to copy and adapt:
+
+- the `SKILL.md` structure;
+- the activation pattern;
+- the scope and stop rules;
+- the final report format;
+- the safety boundaries;
+- the optional script pattern;
+- the template pattern;
+- the check pattern;
+- the passive review pattern, when useful.
+
+Do not copy blindly. Read the files, remove what you do not need, and test the skill on a small task first.
 
 ## Core idea
 
@@ -114,12 +182,35 @@ You can also use the repository purely as a reference without copying the files 
 
 ## Create your first skill
 
-1. Start from `examples/basic-skill/` if you want the smallest setup.
-2. Copy the folder and rename it.
-3. Update the `name` and `description` fields in `SKILL.md`.
-4. Rewrite the activation line, scope, and rules for your own repeated task.
-5. Keep the reporting format short and clear.
-6. Add scripts only if a step is mechanical, repeated, or easy to validate.
+1. Pick the closest example.
+2. Copy the folder.
+3. Rename the folder.
+4. Open `SKILL.md`.
+5. Change the skill name.
+6. Change the activation line.
+7. Adjust scope and preferences.
+8. Remove unused scripts, templates, or checks.
+9. Run a small test task.
+10. Improve only after the first real use.
+
+## Customize your skill
+
+Customization should be small at first.
+
+Start with:
+
+- name;
+- description;
+- activation line;
+- scope;
+- forbidden actions;
+- final report format;
+- local paths, if any;
+- scripts, only if they make a repeated step safer or easier;
+- templates, only if you want consistent output;
+- checks, only if the requirement is mechanically verifiable.
+
+Keep the first version readable. A skill that is easy to inspect is better than a clever skill that nobody understands.
 
 ## Skill anatomy
 
