@@ -10,6 +10,8 @@ Instead of pasting the same long prompt again and again, this repository shows h
 
 This repository shares a practical working method for creating local skills that make coding agents more consistent, reusable, and easier to guide.
 
+It publishes a copyable operating method, not only demo files. The reasoning, structure, rules, patterns, and optional supporting parts are part of what you can reuse.
+
 ## Why this exists
 
 Long prompts can work well for one task, but they are harder to repeat consistently. This repository shows a simple way to keep recurring agent instructions, helper scripts, templates, and checks in a structure that can be copied and adapted.
@@ -161,6 +163,21 @@ ls examples
 6. Remove anything you do not need.
 7. Test the skill on a small local task.
 
+## Create your own skill in 7 steps
+
+1. Download or clone this repository.
+2. Fill in `templates/skill-config-template.md`.
+3. Open `prompts/create-my-skill-from-config.md`.
+4. Paste the prompt into your coding agent.
+5. Let it generate your custom skill folder.
+6. Review the generated files.
+7. Test the skill on a small task.
+
+Start here:
+- [START_HERE.md](START_HERE.md)
+- [Skill configuration template](templates/skill-config-template.md)
+- [Create my skill prompt](prompts/create-my-skill-from-config.md)
+
 ## Manual setup / installation
 
 There is no installer and no required global package setup.
@@ -288,6 +305,7 @@ The goal is not automatic self-improvement. The goal is to make later manual rev
 - [Safety guidelines](docs/08-safety-guidelines.md)
 - [How to adapt](docs/09-how-to-adapt.md)
 - [FAQ](docs/10-faq.md)
+- [Create your own skill](docs/11-create-your-own-skill.md)
 
 ## Roadmap
 
