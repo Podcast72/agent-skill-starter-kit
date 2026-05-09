@@ -1,0 +1,10 @@
+# Example only.
+# This snippet is intentionally non-functional until you adapt it.
+# Check your local agent or tool configuration before enabling any hook.
+# Keep hooks small, deterministic and non-destructive.
+
+[hooks.example]
+enabled = false
+trigger = "before_prompt"
+command = "python3 path/to/your_hook.py"
+description = "Replace this placeholder with a local command that you have reviewed."

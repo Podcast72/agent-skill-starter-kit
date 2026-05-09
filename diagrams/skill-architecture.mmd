@@ -1,0 +1,13 @@
+flowchart TD
+    A[User Request] --> B[Skill Instructions]
+    B --> C[Optional Mode Detection]
+    C --> D[Optional Scope Guard]
+    D --> E[Optional Scripts]
+    E --> F[Templates]
+    F --> G[Checks]
+    G --> H[Agent Judgment]
+    H --> I[Final Report]
+    B -. optional .-> J[Hooks]
+    J -. guard .-> C
+    J -. guard .-> D
+    J -. validate .-> I
