@@ -1,0 +1,14 @@
+# Manual example only. Do not paste blindly.
+# Keep disabled until you have tested each hook with fake payloads.
+
+# [[hooks]]
+# name = "example-pre-prompt-mode-guard"
+# event = "pre_prompt"
+# command = "bash /path/to/hook-readiness-pack/hooks/pre_prompt_mode_guard.sh"
+# enabled = false
+
+# [[hooks]]
+# name = "example-post-response-report-check"
+# event = "post_response"
+# command = "bash /path/to/hook-readiness-pack/hooks/post_response_report_check.sh"
+# enabled = false

@@ -2,136 +2,77 @@
 
 ![Agent Skill Starter Kit](./agent-skill-starter.png)
 
-## Short description
-
 A practical starter kit for turning repeated agent workflows into reusable local skills.
 
-Instead of pasting the same long prompt again and again, this repository shows how to organize instructions, optional scripts, templates, checks, and guardrails into small skill folders that can be copied, renamed, inspected, and adapted.
+`Local-first` · `Copyable` · `Small scripts` · `Optional hooks` · `MIT License`
 
-This repository shares a practical working method for creating local skills that make coding agents more consistent, reusable, and easier to guide.
+## What this is
 
-It publishes a copyable operating method, not only demo files. The reasoning, structure, rules, patterns, and optional supporting parts are part of what you can reuse.
+Agent Skill Starter Kit is a public, copyable repository for organizing repeated agent workflows into small local skill folders.
+
+It shows a practical pattern for combining:
+
+- `SKILL.md` instructions for behavior and scope;
+- small scripts for repeatable mechanical work;
+- templates for consistent output shape;
+- checks for lightweight validation;
+- optional hooks for local guardrails.
+
+The goal is simple: stop pasting the same long prompt again and again, and turn the parts that repeat into files you can inspect, adapt, and test.
+
+## What this is not
+
+This is not an installer, framework, hosted service, security product, or production system.
+
+It does not ask you to install global hooks, run privileged commands, or trust automation blindly. The examples are meant to be read, copied, reduced, renamed, and tested on small local tasks first.
 
 ## Why this exists
 
-Long prompts can work well for one task, but they are harder to repeat consistently. This repository shows a simple way to keep recurring agent instructions, helper scripts, templates, and checks in a structure that can be copied and adapted.
+Long prompts are useful, but they become hard to maintain when the same workflow returns every week. Skills make that workflow easier to repeat because the instructions, scripts, templates, and checks live in a folder instead of inside one giant prompt.
 
-It is designed to be downloaded or cloned, reviewed locally, and used manually.
+This repository documents a general workflow evolution:
 
-The goal is not to hide the reasoning behind the skill. The reasoning, structure, guardrails, templates, checks, and optional scripts are the reusable part.
-
-You can copy an example, rename the skill, adjust the preferences, and use it as a starting point for your own workflow.
-
-## Origin of the method
-
-This starter kit comes from a practical workflow: repeated agent tasks were first handled with long prompts, then gradually converted into reusable local skills.
-
-The method was shaped by three sources:
-
-- real local usage with coding agents;
-- study of existing agent-skill patterns and public examples;
-- practical lessons from prompt engineering, safety boundaries, templates, checks, and repeatable reports.
-
-The result is not a copy of one specific system. It is a public, simplified, and adaptable method for turning recurring agent workflows into local skills.
-
-The method uses a simple pattern:
-
-- `SKILL.md` for operating instructions;
-- optional scripts for repeatable mechanical steps;
-- templates for consistent outputs;
-- checks for minimum validation;
-- optional hooks for guardrails;
-- final reports to make the agent explain what changed, what was checked, and what was not checked.
-
-The goal is to make agent work easier to repeat, inspect, and adapt.
-
-This repository does not hide the reasoning behind the workflow. The reasoning is part of what you are meant to copy, rename, and adapt to your own local preferences.
-
-## Use the method with your own skill name
-
-The examples are designed so you can keep the operating method and change only what should be personal to your workflow.
-
-In most cases, start by changing:
-
-- the skill name;
-- the activation line;
-- the short description;
-- the allowed scope;
-- the preferred final report format;
-- any local paths or project-specific references;
-- optional scripts, checks, or templates you do not need.
-
-The structure, reasoning pattern, safety rules, and reporting style can stay the same.
-
-## Who this is for
-
-This repository is for people who:
-
-- use local coding agents for repeated tasks;
-- want to turn their personal workflow into reusable local skills;
-- want a clearer structure than pasting the same prompt every time;
-- want a stronger starting point than an empty template;
-- want small, readable examples they can copy and rename;
-- want a shared method with room for different skill names and preferences;
-- want optional scripts and templates without turning the setup into a large system.
-
-## What you get
-
-This repository gives you a copyable structure, not a closed system.
-
-- a basic skill example built around `SKILL.md`;
-- a documentation skill example with a reusable final report template;
-- a safe build skill example with an optional path guard check;
-- a passive review skill example with minimal usage logging;
-- older examples that show additional script and helper patterns;
-- reusable templates for new skills;
-- prompt files for creating or extending your own skill setup;
-- supporting documentation for structure, safety, and adaptation.
-
-## What you are meant to copy
-
-You are encouraged to copy and adapt:
-
-- the `SKILL.md` structure;
-- the activation pattern;
-- the scope and stop rules;
-- the final report format;
-- the safety boundaries;
-- the optional script pattern;
-- the template pattern;
-- the check pattern;
-- the passive review pattern, when useful.
-
-Do not copy blindly. Read the files, remove what you do not need, and test the skill on a small task first.
+```text
+Long prompt
+-> local skill
+-> skill with scripts
+-> templates and checks
+-> optional hooks, only when useful
+```
 
 ## Core idea
 
 ```text
-Skill = operational instructions
-Scripts = repeatable execution
-Templates = consistent output shape
-Checks = basic validation
+Skill = behavior
+Scripts = repeatability
+Templates = output shape
+Checks = validation
 Hooks = optional guardrails
-Agent = reasoning, judgment and adaptation
+Agent = judgment
 ```
 
-## How it works
+A good skill does not remove judgment from the agent. It gives the agent a clearer operating surface: what to do, what not to do, what to verify, and how to report the result.
 
-```text
-User activates or references a skill
--> The agent reads the skill instructions
--> Optional scripts handle repeatable tasks
--> Templates shape the output
--> Checks validate minimum requirements
--> Optional hooks add guardrails
--> The agent produces a final report
-```
+## How the workflow evolved
+
+🧠 Repeated prompts became reusable instructions.
+
+🧰 Repeated manual steps became small scripts.
+
+📄 Repeated report shapes became templates.
+
+✅ Repeated acceptance criteria became checks.
+
+🪝 Repeated guardrails can become optional hooks, but only when they stay small, deterministic, and easy to disable.
+
+🧾 The final report remains important: it should say what changed, what was checked, what was not checked, and what limits remain.
 
 ## Repository structure
 
 ```text
 agent-skill-starter-kit/
 ├── README.md
+├── START_HERE.md
 ├── docs/
 ├── examples/
 ├── templates/
@@ -141,185 +82,149 @@ agent-skill-starter-kit/
 └── .gitignore
 ```
 
-- `docs/` explains concepts, architecture, safety notes, and adaptation steps.
-- `examples/` contains copyable skill examples with increasing structure.
-- `templates/` provides reusable starting files for new skills.
-- `prompts/` contains helper prompts for building or extending your own setup.
-- `diagrams/` contains a simple visual overview of the workflow.
+- `docs/` explains the concepts and patterns.
+- `examples/` contains copyable skill folders and small add-on patterns.
+- `templates/` contains reusable starting files.
+- `prompts/` contains helper prompts for generating or extending skills.
+- `diagrams/` contains a lightweight architecture overview.
 
 ## Quick start
 
-1. Clone or download this repository.
-
-```bash
-cd agent-skill-starter-kit
-ls examples
-```
-
-2. Open the `examples/` folder.
-3. Pick one example that matches your workflow.
-4. Copy that example to a new folder.
-5. Rename the skill and update `SKILL.md`.
-6. Remove anything you do not need.
-7. Test the skill on a small local task.
-
-## Create your own skill in 7 steps
-
-1. Download or clone this repository.
-2. Fill in `templates/skill-config-template.md`.
-3. Open `prompts/create-my-skill-from-config.md`.
-4. Paste the prompt into your coding agent.
-5. Let it generate your custom skill folder.
-6. Review the generated files.
-7. Test the skill on a small task.
-
-Start here:
-- [START_HERE.md](START_HERE.md)
-- [Skill configuration template](templates/skill-config-template.md)
-- [Create my skill prompt](prompts/create-my-skill-from-config.md)
-
-## Manual setup / installation
-
-There is no installer and no required global package setup.
-
-Basic manual setup:
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/Podcast72/agent-skill-starter-kit.git
-```
-
-2. Or download the repository as a ZIP and extract it locally.
-3. Review the example folders before using them.
-4. Copy one example into your own local skill area or workspace.
-5. Adapt names, instructions, templates, and optional scripts as needed.
-
-You can also use the repository purely as a reference without copying the files directly.
+1. Read [START_HERE.md](START_HERE.md).
+2. Pick an example from [`examples/`](examples/).
+3. Copy the example folder to your own local workspace.
+4. Rename the skill and edit `SKILL.md`.
+5. Remove anything you do not need.
+6. Test the skill on a small, low-risk task.
+7. Add scripts, templates, checks, or hooks only when they solve a repeated problem.
 
 ## Create your first skill
 
-1. Pick the closest example.
-2. Copy the folder.
-3. Rename the folder.
-4. Open `SKILL.md`.
-5. Change the skill name.
-6. Change the activation line.
-7. Adjust scope and preferences.
-8. Remove unused scripts, templates, or checks.
-9. Run a small test task.
-10. Improve only after the first real use.
-
-## Customize your skill
-
-Customization should be small at first.
-
-Start with:
-
-- name;
-- description;
-- activation line;
-- scope;
-- forbidden actions;
-- final report format;
-- local paths, if any;
-- scripts, only if they make a repeated step safer or easier;
-- templates, only if you want consistent output;
-- checks, only if the requirement is mechanically verifiable.
-
-Keep the first version readable. A skill that is easy to inspect is better than a clever skill that nobody understands.
-
-## Skill anatomy
-
-A skill can stay very small.
-
-Recommended structure:
+Start with the smallest useful version:
 
 ```text
-skill-name/
+my-skill/
 ├── SKILL.md
-├── scripts/
-├── templates/
-├── checks/
-├── examples/
 └── README.md
 ```
 
-- `SKILL.md` defines the behavior, scope, and reporting rules.
-- `scripts/` contains optional helpers for repeatable tasks.
-- `templates/` contains optional output formats.
-- `checks/` contains minimum validation helpers.
-- `examples/` can contain sample outputs or usage references.
-- `README.md` documents the skill for human readers.
+Then add folders only when they earn their place:
 
-Not every skill needs every folder. A simple skill can be only `SKILL.md` and `README.md`.
+```text
+my-skill/
+├── SKILL.md
+├── README.md
+├── scripts/
+├── templates/
+├── checks/
+└── examples/
+```
 
-## Example use cases
+A strong first skill usually contains:
 
-- a documentation skill that always returns the same final report format;
-- a local review skill with consistent scope rules;
-- a patching skill with a lightweight path guard;
-- a research or notes skill that keeps outputs in a stable template;
-- an experimental passive skill that records minimal usage metadata for later manual review.
+- when to use it;
+- what scope is allowed;
+- what actions are forbidden;
+- what output format is required;
+- what validation should happen before final answer.
 
-## Safety guidelines
+## What to copy
 
-- Do not store secrets in skills.
-- Do not scan broad filesystem paths by default.
-- Do not run destructive commands by default.
-- Do not use `sudo` by default.
-- Do not install global packages by default.
-- Do not run `git push` by default.
-- Keep scripts small and readable.
-- Keep hooks few and deterministic.
-- Keep checks narrow and easy to inspect.
-- Treat checks as minimum validation only, not as a replacement for review or testing.
-- Always report what was changed and what was not checked.
+Copy patterns, not private context.
 
-## Experimental passive skill pattern
+Good things to copy:
 
-The experimental passive skill pattern is a simple example of how a skill can record minimal usage metadata for later manual review.
+- skill folder structure;
+- concise activation language;
+- scope and stop rules;
+- final report format;
+- small helper scripts;
+- report templates;
+- smoke checks;
+- optional hook snippets that are disabled by default.
 
-It is intentionally limited:
+Things to replace:
 
-- logging is optional;
-- full prompt text must not be stored;
-- secrets and personal data must not be stored;
-- file contents must not be stored;
-- the skill must not modify itself;
-- the skill must not change global configuration;
-- hooks must not be installed automatically;
-- no automatic improvement decisions should be made.
+- personal paths;
+- project names;
+- private logs;
+- local-only assumptions;
+- prompts that mention sensitive or internal work.
 
-The goal is not automatic self-improvement. The goal is to make later manual review easier.
+## Example patterns
 
-## Documentation
+- [`examples/basic-skill`](examples/basic-skill/) shows a minimal skill.
+- [`examples/skill-with-scripts`](examples/skill-with-scripts/) shows scripts, checks, and templates.
+- [`examples/review-closeout-skill`](examples/review-closeout-skill/) shows a controlled final review pattern.
+- [`examples/hook-readiness-pack`](examples/hook-readiness-pack/) shows optional local hooks that are not active by default.
 
-- [What are agent skills](docs/01-what-are-agent-skills.md)
-- [Why use skills](docs/02-why-use-skills.md)
+## Optional hooks, carefully
+
+Hooks can help enforce repeated guardrails, but they should stay rare.
+
+Use optional hooks when:
+
+- the check is deterministic;
+- the output is easy to inspect;
+- failure mode is understandable;
+- the hook can run in warning-only mode first;
+- one hook can be tested at a time.
+
+Avoid hooks when:
+
+- the logic requires judgment;
+- the hook would scan broad directories;
+- it needs secrets or elevated permissions;
+- it would run `sudo`, global installs, or automatic `git push`;
+- you cannot easily disable or explain it.
+
+See [Hook readiness pattern](docs/13-hook-readiness-pattern.md).
+
+## Safety rules
+
+🛡️ Before sharing or publishing a skill repository:
+
+- do not include secrets, tokens, passwords, credentials, or `.env` files;
+- do not include personal filesystem paths;
+- do not include private logs or internal project details;
+- do not add automatic `sudo`, global installs, or `git push`;
+- do not make broad filesystem scans the default;
+- do not claim a skill is a security product or production system;
+- run smoke tests for scripts when scripts exist.
+
+See [Public repo safety checklist](docs/14-public-repo-safety-checklist.md).
+
+## Documentation map
+
+- [What are agent skills?](docs/01-what-are-agent-skills.md)
+- [Why use skills?](docs/02-why-use-skills.md)
 - [Basic architecture](docs/03-basic-architecture.md)
 - [Skill folder structure](docs/04-skill-folder-structure.md)
 - [Scripts, templates, checks](docs/05-scripts-templates-checks.md)
 - [Optional hooks](docs/06-optional-hooks.md)
-- [Experimental passive skill](docs/07-experimental-passive-skill.md)
 - [Safety guidelines](docs/08-safety-guidelines.md)
 - [How to adapt](docs/09-how-to-adapt.md)
-- [FAQ](docs/10-faq.md)
 - [Create your own skill](docs/11-create-your-own-skill.md)
+- [Workflow recap](docs/11-codex-workflow-recap.md)
+- [Review closeout pattern](docs/12-review-closeout-pattern.md)
+- [Hook readiness pattern](docs/13-hook-readiness-pattern.md)
+- [Public repo safety checklist](docs/14-public-repo-safety-checklist.md)
+- [From private workflow to public template](docs/15-from-private-workflow-to-public-template.md)
 
 ## Roadmap
 
-- Keep the examples small and easy to inspect.
-- Improve documentation where recurring questions appear.
-- Add more adaptation notes if new public examples stay generic and readable.
-- Keep the passive example limited to manual-review patterns.
+🚀 Possible future improvements:
+
+- more small examples;
+- additional report templates;
+- more smoke-test patterns;
+- clearer diagrams;
+- language-specific examples for common local workflows.
 
 ## License
 
-This repository is available under the [MIT License](LICENSE).
+MIT. See [LICENSE](LICENSE).
 
 ## Disclaimer
 
-This repository is an educational starter kit and reference example. Review and test every script before using it in your own environment.
-
-It is not a framework, not a formal standard, not a security product, and not a production-ready system.
+This repository is an educational starter kit. Review every file before using it. Adapt examples to your local environment. Keep hooks optional and disabled until you have tested them carefully.
